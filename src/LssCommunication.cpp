@@ -107,6 +107,7 @@ LssCommands LynxPacket::parseCommand(const char*& pkt)
     case 'R': SWITCH(LssInvalid) {
       case 'D': SWITCH(LssInvalid) {
         case 'M': ACCEPT(LssSpeed|LssPulse);
+        case 'T': ACCEPT(LssSpeedTime|LssPulse); //Custom added
       }
       case 'E': SWITCH(LssInvalid) {
       case 'S': SWITCH(LssInvalid) {
